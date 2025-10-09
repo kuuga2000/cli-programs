@@ -15,11 +15,14 @@ if not exist "%~1" (
 echo Converting numbers from file:
 echo ============================
 
+set "counter=1"
 for /f "usebackq delims=" %%n in ("%~1") do (
     set "num=%%n"
     if defined num (
         for /f "delims=" %%s in ('powershell "!num!/1000"') do (
-            echo !num! = %%s
+            set "padded=0!counter!"
+            echo %%s %~n1!padded:~-2!
+            set /a counter+=1
         )
     )
 )
