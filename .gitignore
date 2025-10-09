@@ -39,9 +39,9 @@ desktop.ini
 *.exe
 
 # multimedia and others
-.mp3
-.wav
-.aac
-.flac
+*.mp3
+*.wav
+*.aac
+*.flac
 
-.txt
+*.txt
